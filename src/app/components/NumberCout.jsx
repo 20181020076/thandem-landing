@@ -51,9 +51,9 @@ const NumberCout = ({ number, description }) => {
   }, [isVisible, number]);
 
   return (
-    <div ref={containerRef} className="w-[90px] h-[90px] flex flex-col border-[7px]  border-violet-600 rounded-full justify-center items-center text-black dark:text-white">
+    <div ref={containerRef} className="w-[100px] h-[100px] flex flex-col border-[7px]  border-violet-600 rounded-full justify-center items-center text-black dark:text-white">
       <div className="flex justify-center font-bold">+{count}</div>
-      <div className="flex text-center text-[12px]">{description}</div>
+      <div className="flex text-center text-[14px]">{description}</div>
     </div>
   );
 };

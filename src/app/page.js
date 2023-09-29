@@ -6,6 +6,8 @@ import NumberCount from "./components/NumberCout";
 import { CamelPlan, HomeIcon, PlantaIcon } from "./components/Icons";
 import Image from "next/image";
 import Card from "./components/Card";
+import Profile from "./components/Profile";
+import BgStars from "./components/BgStars";
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
 
@@ -30,16 +32,20 @@ export default function Home() {
         </div>
 
         <div className="flex flex-col w-full h-[100%] justify-center items-center z-20">
-          <h1 className="text-2xl font-bold uppercase text-center">thandem</h1>
-          <p>Al final de todo solo nos quedamos con nuestras experiencias </p>
+          <h1 className="text-4xl font-bold uppercase text-center -translate-y-7">
+            thandem
+          </h1>
+          <p className="w-[80%] text-center">
+            Al final de todo solo nos quedamos con nuestras experiencias{" "}
+          </p>
         </div>
       </div>
       {/* seccion 2 */}
       <div
-        className="flex flex-col justify-center items-center bg-white w-full h-[100vh] dark:bg-dark dark:text-white"
+        className="flex flex-col pt-[40vh] items-center bg-white w-full h-[120vh] dark:bg-dark dark:text-white"
         id="seccion2"
       >
-        <div className="mb-10">
+        <div className="mb-10 flex flex-col gap-10">
           <h2 className="font-bold text-xl text-center mb-5">
             ¿Quienes somos?
           </h2>
@@ -57,18 +63,67 @@ export default function Home() {
       {/* seccion 3 */}
 
       <div
-        className="flex flex-col justify-center items-center bg-violet-700 w-full h-[200vh] relative"
+        className="flex flex-col justify-center items-center bg-gradient-to-b from-violet-800  to-black w-full h-[200vh] relative"
         id="seccion3"
       >
-        <Card/>
+        <div className="absolute w-full h-full">
+          <BgStars />
+        </div>
+        <Card />
       </div>
       {/* seccion 4 */}
 
       <div
-        className="flex flex-col justify-center bg-dark w-full h-[100vh] text-white"
+        className="relative flex flex-col justify-center items-center bg-gradient-to-b from-black to-dark  w-full h-[150vh] -translate-y-[1px] text-white border-[0px]"
         id="seccion4"
       >
-        <h2>Trayecto</h2>
+        
+        {/* <h2>Trayecto</h2> */}
+        <div className="flex w-full flex-col gap-4 justify-center items-center">
+          <div className="flex-col">
+            <Profile
+              imagen={"coy.jpg"}
+              nombre={"Bryan Coy"}
+              rol={"co-founder"}
+              descripcion={"el mas gei de todos dfdfdfdffffffffff dfdfdf dff fdfgddgsagd gdg d"}
+            />
+          </div>
+          <div className="flex-col">
+            <Profile
+              imagen={"musculoso.jpeg"}
+              nombre={"Diego Rojas"}
+              rol={"co-founder"}
+              descripcion={"el mas riki de todos"}
+            />
+          </div>
+          <div className="flex-col">
+            <Profile
+              imagen={"garzan.jpg"}
+              nombre={"Diego Garzon"}
+              rol={"co-founder"}
+              descripcion={"chiguirio"}
+            />
+          </div>
+        </div>
+      </div>
+      {/* seccion  5*/}
+      <div className="h-[100vh] text-white w-[100%] bg-dark border-[0px]  flex flex-col justify-center items-center -translate-y-[2px]" id="seccion5">
+        <h2 className="font-bold">Contactanos </h2>
+        <form className="w-[80%] flex flex-col justify-center gap-3">
+          <input
+            placeholder="nombre "
+            className="rounded-full bg-transparent text-white border border-white p-2"
+          />
+          <input
+            placeholder="apellido "
+            className="rounded-full bg-transparent text-white border border-white p-2"
+          />
+          <input
+            placeholder="descripcion "
+            className="rounded-full bg-transparent text-white border border-white p-2"
+          />
+          <button className="rounded-full bg-transparent text-white border border-white p-2">Hola</button>
+        </form>
       </div>
     </div>
   );
