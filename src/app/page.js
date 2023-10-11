@@ -26,7 +26,7 @@ export default function Home() {
 
       <div className="flex flex-col relative overflow-hidden  justify-start bg-gray-200 w-full text-white h-[120vh] pt-[50px]  dark:bg-dark">
         <div className="absolute flex top-0 justify-center items-center  w-[100%] h-[100%]">
-          <video autoPlay loop muted className=" w-[450%] max-w-none">
+          <video autoPlay loop muted className=" h-[full] max-w-none">
             <source src="/images/file.mp4" type="video/mp4" />
           </video>
         </div>
@@ -63,7 +63,7 @@ export default function Home() {
       {/* seccion 3 */}
 
       <div
-        className="flex flex-col justify-center items-center bg-gradient-to-b from-violet-800  to-black w-full h-[200vh] relative"
+        className="flex flex-col justify-center items-center bg-gradient-to-b from-violet-800  to-black w-full h-[220vh] relative"
         id="seccion3"
       >
         <div className="absolute w-full h-full">
@@ -79,7 +79,7 @@ export default function Home() {
       >
         
         {/* <h2>Trayecto</h2> */}
-        <div className="flex w-full flex-col gap-4 justify-center items-center">
+        <div className="flex w-full h-full flex-col gap-6 justify-end items-center ">
           <div className="flex-col">
             <Profile
               imagen={"coy.jpg"}

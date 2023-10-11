@@ -37,12 +37,12 @@ const Card = () => {
         top: `${40 + scrollY}px`,
         transform: `rotateY(${angulo}deg)`,
       }}
-      className={`flex flex-col h-[350px] w-[250px] justify-center items-center absolute bg-quaternary rounded-2xl overflow-hidden`}
+      className={`flex flex-col h-[370px] w-[270px] justify-center items-center absolute bg-quaternary rounded-2xl overflow-hidden`}
     >
       <div className="flex flex-col justify-center items-center w-full h-[70%] overflow-hidden ">
-        <h2 className="block text-start w-full px-3 font-bold">Planes para <span className="text-purple-800">toda ocacion</span></h2>
+        <h2 className="block text-start w-full px-3 font-bold text-lg">Planes para <span className="text-purple-800">toda ocacion</span></h2>
         <div className="h-[85%] w-[90%] relative border border-black overflow-hidden rounded-lg">
-          <div className="absolute flex top-[5px] left-[7px] w-[60px] h-[25px] bg-white rounded-full text-black"><StarIcon/> <p className="">5</p></div>
+          <div className="absolute flex top-[5px] left-[7px] w-[60px] h-[25px] bg-white rounded-full text-black font-bold"><StarIcon/> <p className="">5</p></div>
         <img
           src="/images/dance.png"
           alt="fiesta"
@@ -52,7 +52,7 @@ const Card = () => {
       </div>
       <div className="h-[30%] p-2">
         <div className="flex justify-around">
-        <h2 className="text-purple-800 font-bold  ">¿Que hacemos?</h2>
+        <h2 className="text-purple-800 font-bold text-lg  ">¿Que hacemos?</h2>
         <div className="flex w-[50px]">
           <DollarIcon/>
           <DollarIcon/>
@@ -63,6 +63,7 @@ const Card = () => {
         </div>
         <p className=" px-2 text-justify">conectar gente con su propia identidad</p>
       </div>
+      <div className="w-full flex justify-between px-2 pb-1 font-bold"><p>hora: <span className="text-violet-800 text-bold text-lg">ya!</span></p><p>lugar: <span className="text-violet-800">Thandem</span></p></div>
     </div>
   ) : 
     <div
