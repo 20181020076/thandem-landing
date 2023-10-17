@@ -7,6 +7,9 @@ module.exports = {
   ],
   darkMode: "class",
   theme: {
+    fontFamily:{
+      'monserrat-alternates': ['monserrat-alternates']
+    },
     screens: {
       "2xl": { max: "1535px" },
       // => @media (max-width: 1535px) { ... }
@@ -27,6 +30,9 @@ module.exports = {
       // => @media (max-width: 479px) { ... }
     },
     extend: {
+      boxShadow: {
+        'card': '2px 5px 7px 7px rgba(0, 0, 0, 0.5)',
+      },
       keyframes: {
         twinklin: {
           "0%": {
@@ -53,13 +59,14 @@ module.exports = {
           "conic-gradient(from 180deg at 50% 50%, var(--tw-gradient-stops))",
       },
       colors: {
-        dark: "#1b1b1b",
-        light: "#f5f5f5",
+        dark: "#000000",
+        light: "#ffffff",
         primary: "#3c3a8f", // 240,86,199
-        primaryDark: "#58E6D9", // 80,230,217.
-        secundary: "#00ccff",
-        tertiary: "#d400d4",
-        quaternary: "#efe7e7"
+        Romantic: "#bf1667", // 80,230,217.
+        Nature: "#52a12c",
+        NightLife: "#7011bb",
+        Coffe: "#ea8322",
+
       },
     },
   },

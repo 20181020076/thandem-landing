@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { SunIcon, MoonIcon } from "./Icons";
+import { SunIcon, MoonIcon, MenuIcon, ThandemIcon } from "./Icons";
 import useThemeSwitcher from "./hooks/useThemeSwitcher";
 
 const NavBar = () => {
@@ -23,7 +23,7 @@ const NavBar = () => {
     };
   },[prevScrollPos, visible])
   return (
-    <div className={`w-[95%] h-[50px] px-2 flex z-50 bg-white rounded-full justify-between  fixed top-4 left-1/2 -translate-x-1/2 transition-all duration-300 dark:bg-dark ${visible ? '' :  (!isOpen&& '-translate-y-20')}`}>
+    <div className={`w-[95%] h-[40px] px-2 flex z-50 bg-white rounded-full justify-between  fixed top-4 left-1/2 -translate-x-1/2 transition-all duration-300 dark:bg-dark ${visible ? '' :  (!isOpen&& '-translate-y-20')}`}>
       <div
         className={` fixed -top-4  flex w-[80vw] items-center h-[100vh] bg-violet-700 text-white transition-all duration-300 ${
           !isOpen ? "-left-[500px]": "-left-[2.5vw]"
@@ -42,34 +42,13 @@ const NavBar = () => {
           <li>
             <a href="#seccion4" onClick={()=>setIsOpen(false)}>Equipo</a>
           </li>
-          <li>
-            <a href="#seccion5" onClick={()=>setIsOpen(false)}>Contactenos</a>
-          </li>
         </ul>
       </div>
-      <button
-        className={`flex flex-col justify-center items-center transition-all duration-300  ${
-          isOpen ? "fixed h-[50px] right-[23%]" : ""
-        }`}
-        onClick={handleClick}
-      >
-        <span
-          className={`bg-black dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm -translate-y-0.5 ${
-            isOpen ? "rotate-45 translate-y-1" : "-translate-y-0.5"
-          }`}
-        ></span>
-        <span
-          className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm my-0.5 ${
-            isOpen ? "hidden" : "opacity-100"
-          }`}
-        ></span>
-        <span
-          className={`bg-dark dark:bg-light transition-all duration-300 ease-out block h-0.5 w-6 rounded-sm translate-y-0.5 ${
-            isOpen ? "-rotate-45 -translate-y-1" : -"translate-y-0.5"
-          }`}
-        ></span>
+      <button className={`flex justify-center ml-2 items-center h-full w-6 transition-all duration-300 ${isOpen?"fixed z-50 left-[70%]":""}`} onClick={()=>setIsOpen(!isOpen)}>
+
+      <MenuIcon/>
       </button>
-      <div className="flex h-full items-center dark:text-white">Thandem</div>
+      <div className="flex h-full w-[100px] items-center dark:text-white"><ThandemIcon mode={mode}/></div>
       <div className="flex justify-center items-center ">
         <button
           onClick={() => setMode(mode === "light" ? "dark" : "light")}

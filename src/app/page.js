@@ -2,14 +2,58 @@
 import Contador from "./components/Contador";
 import NavBar from "./components/NavBar";
 import { useState, useEffect } from "react";
-import NumberCount from "./components/NumberCout";
-import { CamelPlan, HomeIcon, PlantaIcon } from "./components/Icons";
-import Image from "next/image";
-import Card from "./components/Card";
+import NumberCount2 from "./components/NumberCount2";
+import {
+  BorderCount,
+  CamelPlan,
+  CoffeIcon,
+  HomeIcon,
+  NatureIcon,
+  NightLifeIcon,
+  PlantaIcon,
+  EyeIcon,
+  RomanticIcon,
+  LineIcon,
+} from "./components/Icons";
+
 import Profile from "./components/Profile";
-import BgStars from "./components/BgStars";
+import StackCategories from "./components/StackCategories";
+import CardServices from "./components/CardServices";
+import CardProfile from "./components/CardProfile";
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
+  const [colorTheme, setColorTheme] = useState()
+  const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
+const [windowHeight, setWindowHeight] = useState(typeof window !== 'undefined' ? window.innerHeight : 0);
+
+  
+  const categories = [
+    {
+      id:1,
+      title: "Nightlife & Clubs",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim aborum.",
+      icon: "NightLifeIcon",
+    },
+    {
+      id:2,
+      title: "Naturaleza",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim aborum.",
+      icon: "NatureIcon",
+    },
+    {
+      id:3,
+      title: "Cafe",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim aborum.",
+      icon: "CoffeIcon",
+    },
+    {
+      id:4,
+      title: "Romanticos",
+      description:"Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim aborum.",
+      icon: "RomanticIcon",
+    },
+    
+  ];
 
   useEffect(() => {
     const handleScroll = () => {
@@ -19,57 +63,89 @@ export default function Home() {
     return () => {
       window.removeEventListener("scroll", handleScroll);
     };
-  }, []);
+  }, [colorTheme]);
   return (
-    <div className="overflow-hidden " id="seccion1">
+    <div className="overflow-hidden" id="seccion1">
       <NavBar />
-
-      <div className="flex flex-col relative overflow-hidden  justify-start bg-gray-200 w-full text-white h-[120vh] pt-[50px]  dark:bg-dark">
-        <div className="absolute flex top-0 justify-center items-center  w-[100%] h-[100%]">
-          <video autoPlay loop muted className=" h-[full] max-w-none">
-            <source src="/images/file.mp4" type="video/mp4" />
+      {/* seccion 1 */}
+      <div className="flex flex-col relative overflow-hidden  justify-start items-start bg-gray-200 w-full text-white h-[100vh]  dark:bg-dark">
+        <div className="w-full h-[100vh]">
+          <div className="flex justify-center items-center  w-[100%] h-[70%] relative">
+          <div className="w-full h-[50vh] absolute -bottom-1 z-10 bg-gradient-to-b from-transparent to-black"></div>
+          <video className="h-full max-w-none" height={"100vh"} loop autoPlay muted>
+            <source src="/images/Video-amigos.mp4" type="video/mp4"/>
           </video>
         </div>
 
-        <div className="flex flex-col w-full h-[100%] justify-center items-center z-20">
-          <h1 className="text-4xl font-bold uppercase text-center -translate-y-7">
-            thandem
-          </h1>
-          <p className="w-[80%] text-center">
-            Al final de todo solo nos quedamos con nuestras experiencias{" "}
+        <div className="flex flex-col w-full h-[30%] justify-start items-center z-20 gap-4">
+          <p className="w-[80%] text-center font-monserrat-alternates font-extralight text-[17px]">
+            Al final de todo solo nos quedamos <br></br> con nuestras experiencias
           </p>
+          <div className="flex w-full justify-center items-center gap-4">
+            <div className="">
+              <RomanticIcon size={40}/>
+            </div>
+
+            <NatureIcon size={40}/>
+            <NightLifeIcon size={40}/>
+            <CoffeIcon size={40}/>
+          </div>
+          <div className="bg-white w-[80%] h-[2px] rounded-full mt-[15px]"></div>
         </div>
+        </div>
+        
       </div>
       {/* seccion 2 */}
       <div
-        className="flex flex-col pt-[40vh] items-center bg-white w-full h-[120vh] dark:bg-dark dark:text-white"
+        className={`flex flex-col w-full h-[100vh] items-center justify-center dark:bg-gradient-to-b dark:from-black dark:to-dark -translate-y-[1px] pt-[30px] dark:text-white`}
         id="seccion2"
+        style={{background:`linear-gradient(to bottom, #000000 25%, ${colorTheme})`}}
       >
-        <div className="mb-10 flex flex-col gap-10">
-          <h2 className="font-bold text-xl text-center mb-5">
+        <div className="mb-7 flex flex-col h-[15%] gap-2 " style={{opacity: (scrollY>windowHeight/2)?1 :0, transform:`translateY(${(scrollY>windowHeight/2)? 0 : 50}px)`,transition: 'opacity 0.5s, transform 0.5s'}}>
+          <h2 className="font-bold text-[25px] text-center">
             ¿Quienes somos?
           </h2>
-          <p className="text-center">
+          <p
+            className="w-[310px] text-center text-sm"
+            
+          >
             Somos una startup que busca el bienestar de todos logrando conectar
-            grandes experiencias con personas qie estan dispuestas a los retos
+            grandes experiencias con personas que estan dispuestas a los retos
           </p>
         </div>
-        <div className="flex w-full justify-center gap-1 z-20">
-          <NumberCount number={50} description={"Empresas asociados"} />
-          <NumberCount number={150} description={"Usuarios activos"} />
-          <NumberCount number={5} description={"socios al mando"} />
+        <div className="flex w-[80%] justify-center items-start h-[20%]  z-20 " style={{opacity: (scrollY>windowHeight*0.7)? 1 : 0, transform:`translateY(${(scrollY>windowHeight*0.7)? 0 : 50}px)`,transition: 'opacity 0.5s, transform 0.5s'}}>
+          <NumberCount2 number1={50} number2={150} number3={3}/>
+        </div>
+        
+        <div className="w-full h-[65%] flex justify-center items-center " style={{opacity: (scrollY>windowHeight)? 1 : 0, transform:`translateY(${(scrollY>windowHeight)? 0 : 50}px)`,transition: 'opacity 0.5s, transform 0.5s'}}>
+          <StackCategories categories={categories} colorTheme={colorTheme} setColorTheme={setColorTheme} />
         </div>
       </div>
       {/* seccion 3 */}
 
       <div
-        className="flex flex-col justify-center items-center bg-gradient-to-b from-violet-800  to-black w-full h-[220vh] relative"
+        className="flex flex-col  items-center w-full h-[150vh] relative -translate-y-[2px] pt-10"
         id="seccion3"
+        style={{background:`linear-gradient(to bottom, ${colorTheme}, #000000)`}}
       >
-        <div className="absolute w-full h-full">
-          <BgStars />
+        <div className="flex justify-center items-start mt-5 w-full h-full absolute">
+          <LineIcon/>
         </div>
-        <Card />
+        <div className="absolute w-full flex flex-col top-[3vh] justify-center items-center left-[50%] -translate-x-[50%]  dark:text-white">
+          <h2 className="w-full text-[25px] text-center font-bold ">Nuestros Servicios</h2>
+          <div className="w-[70%] h-[2px] bg-white"></div>
+        </div>
+       <div className="flex border pt-10 justify-center items-center w-full overflow-hidden">
+          <CardServices/>
+        </div> 
+        <div className="h-[80vh] w-full flex flex-col items-end justify-end pb-[12vh] gap-[2.5vh] border border-yellow-500">
+          <CardProfile profile={{name:"Diego Rojas", rol:"co-founder", image:"profile.png"}}/>
+          <CardProfile izquierda={true} profile={{nombre:"Diego Rojas", rol:"co-founder", image:"profile.png"}}/>
+          <CardProfile profile={{name:"Diego Rojas", rol:"co-founder", image:"profile.png"}}/>
+
+        </div>
+        
+       
       </div>
       {/* seccion 4 */}
 
@@ -77,37 +153,6 @@ export default function Home() {
         className="relative flex flex-col justify-center items-center bg-gradient-to-b from-black to-dark  w-full h-[150vh] -translate-y-[1px] text-white border-[0px]"
         id="seccion4"
       >
-        
-        {/* <h2>Trayecto</h2> */}
-        <div className="flex w-full h-full flex-col gap-6 justify-end items-center ">
-          <div className="flex-col">
-            <Profile
-              imagen={"coy.jpg"}
-              nombre={"Bryan Coy"}
-              rol={"co-founder"}
-              descripcion={"el mas gei de todos dfdfdfdffffffffff dfdfdf dff fdfgddgsagd gdg d"}
-            />
-          </div>
-          <div className="flex-col">
-            <Profile
-              imagen={"musculoso.jpeg"}
-              nombre={"Diego Rojas"}
-              rol={"co-founder"}
-              descripcion={"el mas riki de todos"}
-            />
-          </div>
-          <div className="flex-col">
-            <Profile
-              imagen={"garzan.jpg"}
-              nombre={"Diego Garzon"}
-              rol={"co-founder"}
-              descripcion={"chiguirio"}
-            />
-          </div>
-        </div>
-      </div>
-      {/* seccion  5*/}
-      <div className="h-[100vh] text-white w-[100%] bg-dark border-[0px]  flex flex-col justify-center items-center -translate-y-[2px]" id="seccion5">
         <h2 className="font-bold">Contactanos </h2>
         <form className="w-[80%] flex flex-col justify-center gap-3">
           <input
@@ -122,9 +167,14 @@ export default function Home() {
             placeholder="descripcion "
             className="rounded-full bg-transparent text-white border border-white p-2"
           />
-          <button className="rounded-full bg-transparent text-white border border-white p-2">Hola</button>
+          <button className="rounded-full bg-transparent text-white border border-white p-2">
+            Hola
+          </button>
         </form>
+        
+        
       </div>
+      
     </div>
   );
 }
