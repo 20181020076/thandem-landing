@@ -3,6 +3,7 @@ export const ProfileCircleIcon = ({}) => (
     id="Capa_2"
     viewBox="0 0 116.28 116.42"
     className="w-full "
+    
   >
     <defs>
       <linearGradient
@@ -31,8 +32,8 @@ export const ProfileCircleIcon = ({}) => (
         className="cls-1"
         fill="url(#degradadoProfile1)"
         stroke="url(#degradadoProfile2)"
-        strokeMiterlimit={10}
-        strokeWidth="6px"
+        // strokeMiterlimit={10}
+        strokeWidth="10px"
         d="M62.29,6.07c12,.95,23.74,6,32.91,15.17,20.43,20.43,20.43,53.68,0,74.11-.61,.61-1.24,1.21-1.87,1.79l.96,2.83c.98-.84,1.93-1.73,2.86-2.66,21.51-21.52,21.51-56.51,0-78.03C87.2,9.33,74.37,3.99,61.32,3.25l.97,2.82ZM21.09,21.24c1.53-1.53,3.12-2.94,4.78-4.23l-.94-2.76c-2.02,1.52-3.96,3.2-5.8,5.04-21.5,21.51-21.5,56.5,0,78.01,10.91,10.9,25.28,16.28,39.6,16.12l-.93-2.74c-13.3-.09-26.58-5.2-36.71-15.33C.65,74.91,.65,41.68,21.09,21.24Z"
       />
     </g>
@@ -118,7 +119,7 @@ export const EyeIcon = ({}) => (
   </svg>
 );
 export const LineIcon = ({}) => (
-  <svg id="Capa_2" viewBox="0 0 323.09 913.86" className="w-[80%]">
+  <svg id="Capa_2" viewBox="0 0 323.09 913.86" className="w-[300px]">
     <defs></defs>
     <g id="Capa_1-2">
       <path

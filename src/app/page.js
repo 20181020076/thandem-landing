@@ -128,32 +128,33 @@ const [windowHeight, setWindowHeight] = useState(typeof window !== 'undefined' ?
         id="seccion3"
         style={{background:`linear-gradient(to bottom, ${colorTheme}, #000000)`}}
       >
-        <div className="flex justify-center items-start mt-5 w-full h-full absolute">
+        <div className="flex  justify-center items-start mt-5 w-full  absolute">
           <LineIcon/>
+          <div className=" w-full h-[405px] flex flex-col bottom-0 items-end justify-end  gap-[2.5vh]  absolute">
+          <CardProfile profile={{name:"Bryan David Coy", rol:"co-founder", image:"profile.png"}}/>
+          <CardProfile izquierda={true} profile={{name:"Diego Alejandro Rojas", rol:"co-founder", image:"profile.png"}}/>
+          <CardProfile profile={{name:"Diego Alejandro Garzon", rol:"co-founder", image:"profile.png"}}/>
+
+        </div>
         </div>
         <div className="absolute w-full flex flex-col top-[3vh] justify-center items-center left-[50%] -translate-x-[50%]  dark:text-white">
           <h2 className="w-full text-[25px] text-center font-bold ">Nuestros Servicios</h2>
           <div className="w-[70%] h-[2px] bg-white"></div>
         </div>
-       <div className="flex border pt-10 justify-center items-center w-full overflow-hidden">
+       <div className="flex  pt-10 justify-center items-center w-full overflow-hidden">
           <CardServices/>
         </div> 
-        <div className="h-[80vh] w-full flex flex-col items-end justify-end pb-[12vh] gap-[2.5vh] border border-yellow-500">
-          <CardProfile profile={{name:"Diego Rojas", rol:"co-founder", image:"profile.png"}}/>
-          <CardProfile izquierda={true} profile={{nombre:"Diego Rojas", rol:"co-founder", image:"profile.png"}}/>
-          <CardProfile profile={{name:"Diego Rojas", rol:"co-founder", image:"profile.png"}}/>
-
-        </div>
+       
         
        
       </div>
       {/* seccion 4 */}
 
       <div
-        className="relative flex flex-col justify-center items-center bg-gradient-to-b from-black to-dark  w-full h-[150vh] -translate-y-[1px] text-white border-[0px]"
+        className="relative flex flex-col justify-start items-center bg-gradient-to-b from-black to-dark  w-full h-[100vh] -translate-y-[3px] text-white pt-[40px]"
         id="seccion4"
       >
-        <h2 className="font-bold">Contactanos </h2>
+        <h2 className="font-bold">Contactenos </h2>
         <form className="w-[80%] flex flex-col justify-center gap-3">
           <input
             placeholder="nombre "
