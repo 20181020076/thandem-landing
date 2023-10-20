@@ -5,12 +5,17 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  
-  
 }
 html {
   scroll-behavior: smooth;
-  
 }
-
-
+@keyframes rotate {
+  from {
+    transform: rotate(0deg); /* Ángulo inicial de rotación */
+  }
+  to {
+    transform: rotate(
+      360deg
+    ); /* Ángulo final de rotación (una vuelta completa) */
+  }
+}

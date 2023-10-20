@@ -128,20 +128,20 @@ const [windowHeight, setWindowHeight] = useState(typeof window !== 'undefined' ?
         id="seccion3"
         style={{background:`linear-gradient(to bottom, ${colorTheme}, #000000)`}}
       >
-        <div className="flex  justify-center items-start mt-5 w-full  absolute">
+        <div className="flex  justify-center items-start mt-5 w-full  absolute" style={{opacity: (scrollY>windowHeight*1.8)? 1 : 0, transform:`translateY(${(scrollY>windowHeight*1.8)? 0 : 50}px)`,transition: 'opacity 0.5s, transform 0.5s'}}>
           <LineIcon/>
           <div className=" w-full h-[405px] flex flex-col bottom-0 items-end justify-end  gap-[2.5vh]  absolute">
-          <CardProfile profile={{name:"Bryan David Coy", rol:"co-founder", image:"profile.png"}}/>
-          <CardProfile izquierda={true} profile={{name:"Diego Alejandro Rojas", rol:"co-founder", image:"profile.png"}}/>
-          <CardProfile profile={{name:"Diego Alejandro Garzon", rol:"co-founder", image:"profile.png"}}/>
+          <CardProfile orden={1} profile={{name:"Bryan David Coy", rol:"co-founder", image:"profile.png"}} scrollY={scrollY}/>
+          <CardProfile orden={2} izquierda={true} profile={{name:"Diego Alejandro Rojas", rol:"co-founder", image:"profile.png"}} scrollY={scrollY}/>
+          <CardProfile orden={3} profile={{name:"Diego Alejandro Garzon", rol:"co-founder", image:"profile.png"}} scrollY={scrollY}/>
 
         </div>
         </div>
-        <div className="absolute w-full flex flex-col top-[3vh] justify-center items-center left-[50%] -translate-x-[50%]  dark:text-white">
+        <div className={`absolute w-full flex flex-col top-[3vh] justify-center items-center    dark:text-white`} style={{opacity: (scrollY>windowHeight*1.6)? 1 : 0, transform:`translateY(${(scrollY>windowHeight*1.6)? 0 : 50}px)`,transition: 'opacity 0.5s, transform 0.5s'}}>
           <h2 className="w-full text-[25px] text-center font-bold ">Nuestros Servicios</h2>
           <div className="w-[70%] h-[2px] bg-white"></div>
         </div>
-       <div className="flex  pt-10 justify-center items-center w-full overflow-hidden">
+       <div className="flex  pt-10 justify-center items-center w-full overflow-hidden" style={{opacity: (scrollY>windowHeight*1.95)? 1 : 0, transform:`translateX(${(scrollY>windowHeight*1.95)? 0 : 50}px)`,transition: 'opacity 0.5s, transform 0.5s'}}>
           <CardServices/>
         </div> 
        
@@ -153,23 +153,28 @@ const [windowHeight, setWindowHeight] = useState(typeof window !== 'undefined' ?
       <div
         className="relative flex flex-col justify-start items-center bg-gradient-to-b from-black to-dark  w-full h-[100vh] -translate-y-[3px] text-white pt-[40px]"
         id="seccion4"
+        
+        
       >
-        <h2 className="font-bold">Contactenos </h2>
-        <form className="w-[80%] flex flex-col justify-center gap-3">
+        <h2 className="font-bold" style={{opacity: (scrollY>windowHeight*3)? 1 : 0, transform:`translateY(${(scrollY>windowHeight*3)? 0 : 50}px)`,transition: 'opacity 0.5s, transform 0.5s'}}>Contactenos </h2>
+        <form className="w-[80%] flex flex-col justify-center gap-3" >
           <input
             placeholder="nombre "
             className="rounded-full bg-transparent text-white border border-white p-2"
+            style={{opacity: (scrollY>windowHeight*3.1)? 1 : 0, transform:`translateY(${(scrollY>windowHeight*3.1)? 0 : 50}px)`,transition: 'opacity 0.5s, transform 0.5s'}}
           />
           <input
             placeholder="apellido "
             className="rounded-full bg-transparent text-white border border-white p-2"
+            style={{opacity: (scrollY>windowHeight*3.2)? 1 : 0, transform:`translateY(${(scrollY>windowHeight*3.2)? 0 : 50}px)`,transition: 'opacity 0.5s, transform 0.5s'}}
           />
           <input
             placeholder="descripcion "
             className="rounded-full bg-transparent text-white border border-white p-2"
+            style={{opacity: (scrollY>windowHeight*3.3)? 1 : 0, transform:`translateY(${(scrollY>windowHeight*3.3)? 0 : 50}px)`,transition: 'opacity 0.5s, transform 0.5s'}}
           />
-          <button className="rounded-full bg-transparent text-white border border-white p-2">
-            Hola
+          <button className="rounded-full bg-transparent text-white border border-white p-2" style={{opacity: (scrollY>windowHeight*3.4)? 1 : 0, transform:`translateY(${(scrollY>windowHeight*3.4)? 0 : 50}px)`,transition: 'opacity 0.5s, transform 0.5s'}}>
+            Enviar
           </button>
         </form>
         
