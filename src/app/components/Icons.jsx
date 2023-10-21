@@ -355,7 +355,7 @@ export const ThandemIcon = ({ mode }) => (
     </g>
   </svg>
 );
-export const MenuIcon = ({}) => (
+export const MenuIcon = ({mode}) => (
   <svg
     id="Capa_2"
     viewBox="0 0 19 19"
