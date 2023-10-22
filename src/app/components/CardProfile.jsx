@@ -1,6 +1,7 @@
 "use client";
 import React, {useState} from "react";
 import { ProfileCircleIcon } from "./Icons";
+import Image from "next/image";
 
 const CardProfile = ({ izquierda, profile, scrollY, orden }) => {
   const [windowWidth, setWindowWidth] = useState(typeof window !== 'undefined' ? window.innerWidth : 0);
@@ -21,7 +22,7 @@ const [windowHeight, setWindowHeight] = useState(typeof window !== 'undefined' ?
               <ProfileCircleIcon />
             </div>
             <div className={`flex justify-end items-center w-full  text-center`}>
-              <img src={`/images/${profile.image}`} alt="Profile" className=" w-[80%] -translate-x-[9px]"/>
+              <Image src={`/images/${profile.image}`} alt="Profile" className=" -translate-x-[9px]" width={75} height={75}/>
             </div>
           </div>
           <div className=" flex flex-col text-start justify-center items-center bg-transparent w-[180px] h-full ">
