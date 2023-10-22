@@ -25,8 +25,8 @@ const [windowHeight, setWindowHeight] = useState(typeof window !== 'undefined' ?
             </div>
           </div>
           <div className=" flex flex-col text-start justify-center items-center bg-transparent w-[180px] h-full ">
-            <h3 className="text-[14px] font-bold">{profile.name}</h3>
-            <span>{profile.rol}</span>
+            <h3 className="text-[14px] font-bold text-primary dark:text-white">{profile.name}</h3>
+            <span className="text-black text-[14px] dark:text-white">{profile.rol}</span>
 
         </div>
         </div>

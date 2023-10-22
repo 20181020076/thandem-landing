@@ -1,7 +1,7 @@
 "use client";
 import Contador from "./components/Contador";
 import NavBar from "./components/NavBar";
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import NumberCount2 from "./components/NumberCount2";
 import {
   BorderCount,
@@ -15,11 +15,12 @@ import {
   RomanticIcon,
   LineIcon,
 } from "./components/Icons";
-
 import Profile from "./components/Profile";
 import StackCategories from "./components/StackCategories";
 import CardServices from "./components/CardServices";
 import CardProfile from "./components/CardProfile";
+import LineContainer from "./components/LineContainer";
+import useThemeSwitcher from "./components/hooks/useThemeSwitcher";
 export default function Home() {
   const [scrollY, setScrollY] = useState(0);
   const [colorTheme, setColorTheme] = useState();
@@ -29,6 +30,7 @@ export default function Home() {
   const [windowHeight, setWindowHeight] = useState(
     typeof window !== "undefined" ? window.innerHeight : 0
   );
+  const [mode, setMode] = useThemeSwitcher();
 
   const categories = [
     {
@@ -71,17 +73,17 @@ export default function Home() {
     };
   }, [colorTheme]);
   return (
-    <div className="overflow-hidden" id="seccion1">
-      <NavBar />
+    <div className="overflow-hidden bg-white dark:bg-black" id="seccion1">
+      <NavBar mode={mode} setMode={setMode} />
       {/* seccion 1 */}
-      <div className="flex flex-col relative overflow-hidden  justify-start items-start bg-white w-full text-black h-[100vh]  dark:bg-dark dark:text-white">
+      <div className="flex flex-col relative overflow-hidden  justify-start items-start bg-white w-full text-primary h-[100vh]  dark:bg-dark dark:text-white">
         <div className="w-full h-[100vh]">
           <div className="flex justify-center items-center  w-[100%] h-[75%] relative">
-            <div className="w-full h-[30vh] flex justify-center  items-end absolute -bottom-1 z-10 bg-gradient-to-b from-transparent to-black">
-            <p className="text-center font-monserrat-alternates font-extralight text-[17px]">
-              Al final de todo solo nos quedamos <br></br> con nuestras
-              experiencias
-            </p>
+            <div className="w-full h-[30vh] flex justify-center  items-end absolute -bottom-1 z-10 bg-gradient-to-b from-transparent to-white dark:to-black">
+              <p className="text-center font-monserrat-alternates font-extralight text-[17px]">
+                Al final de todo solo nos quedamos <br></br> con nuestras
+                experiencias
+              </p>
             </div>
             <video
               className="h-full max-w-none"
@@ -90,12 +92,11 @@ export default function Home() {
               autoPlay
               muted
             >
-              <source src="/images/video-fondo.mp4" type="video/mp4" />
+              <source src="/images/video-fondo2.mp4" type="video/mp4" />
             </video>
           </div>
 
           <div className="flex flex-col w-full h-[25%] justify-start items-center z-20 gap-4 pt-7">
-            
             <div className="flex w-full justify-center items-center gap-4">
               <div className="">
                 <RomanticIcon size={40} />
@@ -105,16 +106,18 @@ export default function Home() {
               <NightLifeIcon size={40} />
               <CoffeIcon size={40} />
             </div>
-            <div className="bg-white w-[80%] h-[2px] rounded-full mt-[15px]"></div>
+            <div className="bg-primary w-[80%] h-[2px] rounded-full mt-[15px] dark:bg-white"></div>
           </div>
         </div>
       </div>
       {/* seccion 2 */}
       <div
-        className={`flex flex-col w-full h-[100vh] items-center justify-center dark:bg-gradient-to-b dark:from-black dark:to-dark -translate-y-[1px] pt-[30px] dark:text-white`}
+        className={`flex flex-col w-full h-[100vh] items-center justify-center bg-gradient-to-b from-white to-white dark:bg-gradient-to-b dark:from-black dark:to-dark -translate-y-[1px] pt-[30px] dark:text-white`}
         id="seccion2"
         style={{
-          background: `linear-gradient(to bottom, #000000 25%, ${colorTheme})`,
+          background: `linear-gradient(to bottom, ${
+            mode == "dark" ? "#000000" : "#ffffff"
+          } 25%, ${colorTheme})`,
         }}
       >
         <div
@@ -132,7 +135,7 @@ export default function Home() {
           </p>
         </div>
         <div
-          className="flex w-[80%] justify-center items-start h-[20%]  z-20 "
+          className="flex w-[80%] max-w-[300px] justify-center items-start h-[20%]  z-20 "
           style={{
             opacity: scrollY > windowHeight * 0.7 ? 1 : 0,
             transform: `translateY(${scrollY > windowHeight * 0.7 ? 0 : 50}px)`,
@@ -163,18 +166,19 @@ export default function Home() {
         className="flex flex-col  items-center w-full h-[150vh] relative -translate-y-[2px] pt-10"
         id="seccion3"
         style={{
-          background: `linear-gradient(to bottom, ${colorTheme}, #000000)`,
+          background: `linear-gradient(to bottom, ${colorTheme}, ${
+            mode == "dark" ? "#000000" : "#ffffff"
+          })`,
         }}
       >
         <div
           className="flex  justify-center items-start mt-5 w-full  absolute"
           style={{
             opacity: scrollY > windowHeight * 1.8 ? 1 : 0,
-            transform: `translateY(${scrollY > windowHeight * 1.8 ? 0 : 50}px)`,
-            transition: "opacity 0.5s, transform 0.5s",
+            transition: "opacity 0.5s",
           }}
         >
-          <LineIcon />
+          <LineContainer scrollY={scrollY} />
           <div className=" w-full h-[405px] flex flex-col bottom-0 items-end justify-end  gap-[2.5vh]  absolute">
             <CardProfile
               orden={1}
@@ -214,7 +218,7 @@ export default function Home() {
             transition: "opacity 0.5s, transform 0.5s",
           }}
         >
-          <h2 className="w-full text-[25px] text-center font-bold ">
+          <h2 className="w-full text-[25px] text-center font-bold text-white dark:text-white">
             Nuestros Servicios
           </h2>
           <div className="w-[70%] h-[2px] bg-white"></div>
@@ -235,26 +239,33 @@ export default function Home() {
       {/* seccion 4 */}
 
       <div
-        className="relative flex flex-col justify-start items-center bg-gradient-to-b from-black to-dark  w-full h-[100vh] -translate-y-[3px] text-white pt-[30px]"
+        className="relative flex  flex-col justify-start items-center bg-gradient-to-b from-white to-white  w-full h-[100vh] -translate-y-[3px] text-white pt-[10px] dark:from-black dark:to-black"
         id="seccion4"
       >
         <h2
           className="font-bold mb-[20px]"
           style={{
-            opacity: scrollY > windowHeight * 3 ? 1 : 0,
-            transform: `translateY(${scrollY > windowHeight * 3 ? 0 : 50}px)`,
+            opacity: scrollY > windowHeight * 3.25 ? 1 : 0,
+            transform: `translateY(${scrollY > windowHeight * 3.25 ? 0 : 50}px)`,
             transition: "opacity 0.5s, transform 0.5s",
           }}
         >
           ¿Como trabajar con nosotros?
         </h2>
-        <form className="w-[80%] py-[20px] text-xs flex flex-col justify-center items-center gap-3 bg-primary rounded-xl">
+        <form
+          className="w-[80%] py-[20px] text-xs flex flex-col justify-center items-center gap-3 bg-primary rounded-xl"
+          style={{
+            opacity: scrollY > windowHeight * 3.4 ? 1 : 0,
+            transform: `translateY(${scrollY > windowHeight * 3.4 ? 0 : 50}px)`,
+            transition: "opacity 0.5s, transform 0.5s",
+          }}
+        >
           <div
             className="w-[80%] flex flex-col gap-[4px] items-center justify-center"
             style={{
-              opacity: scrollY > windowHeight * 3.1 ? 1 : 0,
+              opacity: scrollY > windowHeight * 3.45 ? 1 : 0,
               transform: `translateY(${
-                scrollY > windowHeight * 3.1 ? 0 : 50
+                scrollY > windowHeight * 3.45 ? 0 : 50
               }px)`,
               transition: "opacity 0.5s, transform 0.5s",
             }}
@@ -267,9 +278,9 @@ export default function Home() {
               name="nombre"
               className="rounded-full h-[25px] w-full bg-white text-white border border-white p-2"
               style={{
-                opacity: scrollY > windowHeight * 3.1 ? 1 : 0,
+                opacity: scrollY > windowHeight * 3.46 ? 1 : 0,
                 transform: `translateY(${
-                  scrollY > windowHeight * 3.1 ? 0 : 50
+                  scrollY > windowHeight * 3.46 ? 0 : 50
                 }px)`,
                 transition: "opacity 0.5s, transform 0.5s",
               }}
@@ -278,9 +289,9 @@ export default function Home() {
           <div
             className="w-[80%] flex flex-col gap-[4px] items-center justify-center"
             style={{
-              opacity: scrollY > windowHeight * 3.1 ? 1 : 0,
+              opacity: scrollY > windowHeight * 3.47 ? 1 : 0,
               transform: `translateY(${
-                scrollY > windowHeight * 3.1 ? 0 : 50
+                scrollY > windowHeight * 3.47 ? 0 : 50
               }px)`,
               transition: "opacity 0.5s, transform 0.5s",
             }}
@@ -293,9 +304,9 @@ export default function Home() {
               name="correo"
               className="rounded-full h-[25px] w-full bg-white text-white border border-white p-2"
               style={{
-                opacity: scrollY > windowHeight * 3.1 ? 1 : 0,
+                opacity: scrollY > windowHeight * 3.48 ? 1 : 0,
                 transform: `translateY(${
-                  scrollY > windowHeight * 3.1 ? 0 : 50
+                  scrollY > windowHeight * 3.48 ? 0 : 50
                 }px)`,
                 transition: "opacity 0.5s, transform 0.5s",
               }}
@@ -304,9 +315,9 @@ export default function Home() {
           <div
             className="w-[80%] flex flex-col gap-[4px] items-center justify-center"
             style={{
-              opacity: scrollY > windowHeight * 3.1 ? 1 : 0,
+              opacity: scrollY > windowHeight * 3.49 ? 1 : 0,
               transform: `translateY(${
-                scrollY > windowHeight * 3.1 ? 0 : 50
+                scrollY > windowHeight * 3.49 ? 0 : 50
               }px)`,
               transition: "opacity 0.5s, transform 0.5s",
             }}
@@ -323,9 +334,9 @@ export default function Home() {
           <div
             className="w-[80%] flex flex-col gap-[4px] items-center justify-center"
             style={{
-              opacity: scrollY > windowHeight * 3.1 ? 1 : 0,
+              opacity: scrollY > windowHeight * 3.5 ? 1 : 0,
               transform: `translateY(${
-                scrollY > windowHeight * 3.1 ? 0 : 50
+                scrollY > windowHeight * 3.5 ? 0 : 50
               }px)`,
               transition: "opacity 0.5s, transform 0.5s",
             }}
@@ -341,11 +352,11 @@ export default function Home() {
           </div>
 
           <button
-            className="rounded-full bg-transparent text-white border border-white p-2"
+            className="rounded-md w-[90px] h-[20px] bg-secundary text-white"
             style={{
-              opacity: scrollY > windowHeight * 3.4 ? 1 : 0,
+              opacity: scrollY > windowHeight * 3.47 ? 1 : 0,
               transform: `translateY(${
-                scrollY > windowHeight * 3.4 ? 0 : 50
+                scrollY > windowHeight * 3.47 ? 4 : 50
               }px)`,
               transition: "opacity 0.5s, transform 0.5s",
             }}
@@ -353,11 +364,28 @@ export default function Home() {
             Enviar
           </button>
         </form>
-        <div className="text-white border flex flex-col absolute bottom-0 w-full h-[40vh] justify-start items-center">
-          <div>
-          <span className="capitalize">Thandem</span>
-          <div className="border-t border-r"></div>
-          
+        <div className="text-white  flex flex-col absolute gap-2 bottom-0 w-[70%] h-[40vh] justify-center items-center">
+          <div className="w-full ">
+            <div className="capitalize flex justify-between items-center text-[18px] bold"><span>Thandem</span><div className="w-[10px] h-[10px] -rotate-45 border-t-[2px] border-r-[2px]"></div></div>
+            <div className="">
+              <ul className="text-[12px] font-light">
+                <li>Cookies Policy</li>
+                <li>Cookies Management</li>
+                <li>Contacto</li>
+              </ul>
+            </div>
+          </div>
+          <div className="w-full">
+          <div className="capitalize w-full flex justify-between items-center text-[18px] bold"><span>Más</span><div className="w-[10px] h-[10px] -rotate-45 border-t-[2px] border-r-[2px]"></div></div>
+            <div className="">
+              <ul className="text-[12px] flex flex-col font-light">
+                <li>Aviso Legal</li>
+                <li>Política de privacidad</li>
+                <li>Términos y condiciones</li>
+                <li>Preguntas frecuentes</li>
+
+              </ul>
+            </div>
           </div>
         </div>
       </div>

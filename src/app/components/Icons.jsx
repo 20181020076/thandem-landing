@@ -1,3 +1,4 @@
+import React from "react";
 export const ProfileCircleIcon = ({}) => (
   <svg
     id="Capa_2"
@@ -118,11 +119,12 @@ export const EyeIcon = ({}) => (
     </g>
   </svg>
 );
-export const LineIcon = ({}) => (
+export const LineIcon =  React.forwardRef((props, ref) => (
   <svg id="Capa_2" viewBox="0 0 323.09 913.86" className="w-[300px]">
     <defs></defs>
     <g id="Capa_1-2">
       <path
+        ref={ref}
         className="cls-1"
         fill="none"
         stroke="#666"
@@ -133,7 +135,7 @@ export const LineIcon = ({}) => (
       />
     </g>
   </svg>
-);
+))
 {
   /* <style>.cls-1{fill:none;stroke:#666;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2.09px;}</style> */
 }
@@ -318,7 +320,8 @@ export const ThandemIcon = ({ mode }) => (
   <svg
     id="Capa_2"
     viewBox="0 0 398.7 96.7"
-    fill={mode == "dark" ? "white" : "black"}
+    fill={mode == "dark" ? "white" : "white"}
+    
   >
     <defs></defs>
     <g id="Capa_1-2">
@@ -359,14 +362,13 @@ export const MenuIcon = ({mode}) => (
   <svg
     id="Capa_2"
     viewBox="0 0 19 19"
-    stroke="white"
-    strokeWidth={"2px"}
+    
     fill="transparent"
     className="h-[20px]"
   >
     <defs>
       <linearGradient
-        id="Degradado_sin_nombre_46"
+        id="cuadro1"
         x1="18.45"
         y1="19.28"
         x2="1.86"
@@ -380,21 +382,21 @@ export const MenuIcon = ({mode}) => (
         <stop offset="1" stopColor="#7011bb" />
       </linearGradient>
       <linearGradient
-        id="Degradado_sin_nombre_46-2"
+        id="cuadro1"
         x1="24.26"
         y1="13.79"
         x2="7.66"
         y2="-3.76"
       />
       <linearGradient
-        id="Degradado_sin_nombre_46-3"
+        id="cuadro3"
         x1="12.96"
         y1="24.47"
         x2="-3.64"
         y2="6.93"
       />
       <linearGradient
-        id="Degradado_sin_nombre_46-4"
+        id="cuadro4"
         x1="18.77"
         y1="18.98"
         x2="2.17"
@@ -403,9 +405,10 @@ export const MenuIcon = ({mode}) => (
     </defs>
     <g id="Capa_1-2">
       <g>
-        <rect className="cls-1" width="8" height="8" rx="1.87" ry="1.87" />
+        <rect className="cls-1" fill="url(#cuadro1)" width="8" height="8" rx="1.87" ry="1.87" />
         <rect
           className="cls-4"
+          fill="url(#cuadro1)"
           x="11"
           width="8"
           height="8"
@@ -413,7 +416,8 @@ export const MenuIcon = ({mode}) => (
           ry="1.87"
         />
         <rect
-          className="cls-3"
+          className="cls-1"
+          fill="url(#cuadro1)"
           y="11"
           width="8"
           height="8"
@@ -421,7 +425,8 @@ export const MenuIcon = ({mode}) => (
           ry="1.87"
         />
         <rect
-          className="cls-2"
+          className="cls-1"
+          fill="url(#cuadro1)"
           x="11"
           y="11"
           width="8"
@@ -648,8 +653,10 @@ export const SunIcon = ({ className, ...rest }) => (
     width="24"
     height="24"
     viewBox="0 0 24 24"
+    
+    
     {...rest}
-    className={`w-[20px] h-[20px] ${className}`}
+    className={`w-[20px] h-[20px] ${className} rounded-full`}
   >
     <g
       fill="none"
@@ -658,7 +665,7 @@ export const SunIcon = ({ className, ...rest }) => (
       strokeLinejoin="round"
       strokeWidth="2"
     >
-      <g strokeDasharray="2">
+      <g strokeDasharray="2" >
         <path d="M12 21v1M21 12h1M12 3v-1M3 12h-1">
           <animate
             fill="freeze"
@@ -777,7 +784,7 @@ export const SunIcon = ({ className, ...rest }) => (
           values="3;12"
         />
       </circle>
-      <circle cx="22" cy="2" r="1">
+      <circle cx="22" cy="2" r="1" >
         <animate
           fill="freeze"
           attributeName="cx"

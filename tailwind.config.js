@@ -62,6 +62,7 @@ module.exports = {
         dark: "#000000",
         light: "#ffffff",
         primary: "#3c3a8f", // 240,86,199
+        secundary: "#8282D1",
         Romantic: "#bf1667", // 80,230,217.
         Nature: "#52a12c",
         NightLife: "#7011bb",

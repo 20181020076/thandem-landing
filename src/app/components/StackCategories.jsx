@@ -47,9 +47,9 @@ const StackCategories = ({ categories, colorTheme, setColorTheme }) => {
   } else {
     return (
       <div className="w-full  h-full flex justify-center items-start bg-transparent">
-        <div className="relative w-[80%]  h-full flex">
+        <div className="relative  w-[80%] max-w-[300px]  h-full flex ">
           <div
-            className={` absolute w-[260px] h-[370px] flex flex-col justify-start items-center p-[10px] shadow-card rounded-2xl bg-white text-black  z-40`}
+            className={` absolute w-[265px] h-[370px] flex flex-col justify-start items-center p-[10px] shadow-card rounded-2xl bg-white text-black  z-40`}
           >
            
               <h2 className="font-bold w-full text-start  text-[16px] ml-3 mb-[8px]">
@@ -75,13 +75,13 @@ const StackCategories = ({ categories, colorTheme, setColorTheme }) => {
           </div>
 
           <div
-            className={`absolute w-[260px] h-[370px] p-[10px] shadow-card rounded-2xl bg-white text-black z-30 translate-x-[10px]`}
+            className={`absolute w-[265px] h-[370px] p-[10px] shadow-card rounded-2xl bg-white text-black z-30 translate-x-[10px]`}
           ></div>
           <div
-            className={`absolute w-[260px] h-[370px] p-[10px] shadow-card rounded-2xl bg-white text-black z-20 translate-x-[20px]`}
+            className={`absolute w-[265px] h-[370px] p-[10px] shadow-card rounded-2xl bg-white text-black z-20 translate-x-[20px]`}
           ></div>
           <div
-            className={`absolute w-[260px] h-[370px] p-[10px] shadow-card rounded-2xl bg-white text-black z-10 translate-x-[30px]`}
+            className={`absolute w-[265px] h-[370px] p-[10px] shadow-card rounded-2xl bg-white text-black z-10 translate-x-[30px]`}
           ></div>
         </div>
       </div>

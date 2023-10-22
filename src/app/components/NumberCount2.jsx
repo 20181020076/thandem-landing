@@ -14,12 +14,12 @@ const NumberCount2 = ({ number1, number2, number3 }) => {
       </div>
       {/* caja 2 */}
       <div className="flex flex-col  h-[55px] w-[300px] justify-center items-center">
-        <h3 className="text-lg">+{number1}</h3>
+        <h3 className="text-lg">+{number2}</h3>
         <p className="text-center text-[12px]">empresas<br></br>asociadas</p>
       </div>
       {/* caja 3 */}
       <div className="flex flex-col  h-[55px] w-[300px] justify-center items-center">
-        <h3 className="text-lg">+{number1}</h3>
+        <h3 className="text-lg">+{number3}</h3>
         <p className="text-center text-[12px]">empresas<br></br>asociadas</p>
       </div>
     </div>
