@@ -4,7 +4,8 @@ export const ProfileCircleIcon = ({}) => (
     id="Capa_2"
     viewBox="0 0 116.28 116.42"
     className="w-full "
-    
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <defs>
       <linearGradient
@@ -21,12 +22,7 @@ export const ProfileCircleIcon = ({}) => (
         <stop offset=".73" stopColor="#bf1667" />
         <stop offset="1" stopColor="#7011bb" />
       </linearGradient>
-      <linearGradient
-        id="degradadoProfile2"
-        x1=".05"
-        x2="116.47"
-        
-      />
+      <linearGradient id="degradadoProfile2" x1=".05" x2="116.47" />
     </defs>
     <g id="Capa_1-2">
       <path
@@ -42,7 +38,13 @@ export const ProfileCircleIcon = ({}) => (
 );
 // <style>.cls-1{fill:url(#Degradado_sin_nombre_46);stroke:url(#Degradado_sin_nombre_46-2);stroke-miterlimit:10;stroke-width:6px;}</style>
 export const FlexibleIcon = ({}) => (
-  <svg id="Capa_2" className="w-[200px] h-[200px]" viewBox="0 0 128.58 104.76">
+  <svg
+    id="Capa_2"
+    className="w-[200px] h-[200px]"
+    viewBox="0 0 128.58 104.76"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
     <defs></defs>
     <g id="Capa_1-2">
       <path
@@ -56,7 +58,13 @@ export const FlexibleIcon = ({}) => (
 
 // <style>.cls-1{fill:#fff;}</style>
 export const BarCharIcon = ({}) => (
-  <svg viewBox="0 0 24 24" fill="none" className="w-[200px] h-[200px]">
+  <svg
+    viewBox="0 0 24 24"
+    fill="none"
+    className="w-[200px] h-[200px]"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
@@ -97,7 +105,13 @@ export const BarCharIcon = ({}) => (
   </svg>
 );
 export const EyeIcon = ({}) => (
-  <svg viewBox="0 0 24 24" fill="white" className="w-[200px] h-[200px]">
+  <svg
+    viewBox="0 0 24 24"
+    fill="white"
+    className="w-[200px] h-[200px]"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
       id="SVGRepo_tracerCarrier"
@@ -119,8 +133,14 @@ export const EyeIcon = ({}) => (
     </g>
   </svg>
 );
-export const LineIcon =  React.forwardRef((props, ref) => (
-  <svg id="Capa_2" viewBox="0 0 323.09 913.86" className="w-[300px]">
+export const LineIcon = React.forwardRef((props, ref) => (
+  <svg
+    id="Capa_2"
+    viewBox="0 0 323.09 913.86"
+    className="w-[300px]"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
     <defs></defs>
     <g id="Capa_1-2">
       <path
@@ -135,13 +155,19 @@ export const LineIcon =  React.forwardRef((props, ref) => (
       />
     </g>
   </svg>
-))
+));
 {
   /* <style>.cls-1{fill:none;stroke:#666;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2.09px;}</style> */
 }
 
 export const RapidezIcon = ({}) => (
-  <svg id="Capa_2" viewBox="-5 -5 89.5 159.91" className="w-[40%]">
+  <svg
+    id="Capa_2"
+    viewBox="-5 -5 89.5 159.91"
+    className="w-[40%]"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
     <filter id="dropShadow">
       <feGaussianBlur in="SourceAlpha" stdDeviation="3" />
       <feOffset dx="2" dy="4" />
@@ -162,7 +188,13 @@ export const RapidezIcon = ({}) => (
   /* <style>.cls-1{fill:#e3e3e1;}</style> */
 }
 export const BorderCount = ({}) => (
-  <svg id="Capa_2" viewBox="0 0 268.08 68.58" className="w-full">
+  <svg
+    id="Capa_2"
+    viewBox="0 0 268.08 68.58"
+    className="w-full"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
     <defs>
       <linearGradient
         id="degrade"
@@ -196,7 +228,14 @@ export const BorderCount = ({}) => (
 }
 
 export const NextIcon = ({ color }) => (
-  <svg id="Capa_2" viewBox="0 0 69.67 63.27" className="w-[20px]" fill={color}>
+  <svg
+    id="Capa_2"
+    viewBox="0 0 69.67 63.27"
+    className="w-[20px]"
+    fill={color}
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
+  >
     <g id="Capa_1-2">
       <g>
         <path d="M69.67,32.7c0,.67-.2,1.29-.55,1.81,.32-.89,.45-1.83,.41-2.76,.09,.3,.14,.62,.14,.95Z" />
@@ -207,6 +246,8 @@ export const NextIcon = ({ color }) => (
 );
 export const CoffeIcon = ({ size }) => (
   <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
     id="Capa_2"
     fill="white"
     viewBox="0 0 117.55 117.55"
@@ -230,6 +271,8 @@ export const CoffeIcon = ({ size }) => (
 );
 export const NightLifeIcon = ({ size }) => (
   <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
     id="Capa_2"
     viewBox="0 0 117.55 117.55"
     className={`w-[${size}px] h-[${size}px] flex justify-center items-center`}
@@ -248,6 +291,8 @@ export const NightLifeIcon = ({ size }) => (
 );
 export const NatureIcon = ({ size }) => (
   <svg
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
     id="Capa_2"
     fill="white"
     viewBox="0 0 117.55 117.55"
@@ -275,6 +320,8 @@ export const RomanticIcon = ({ size }) => (
     id="Capa_2"
     fill="white"
     viewBox="0 0 117.55 117.55"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
     className={`w-[${size}px] h-[${size}px] flex justify-center items-center`}
   >
     <defs></defs>
@@ -321,7 +368,8 @@ export const ThandemIcon = ({ mode }) => (
     id="Capa_2"
     viewBox="0 0 398.7 96.7"
     fill={mode == "dark" ? "white" : "white"}
-    
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <defs></defs>
     <g id="Capa_1-2">
@@ -358,13 +406,14 @@ export const ThandemIcon = ({ mode }) => (
     </g>
   </svg>
 );
-export const MenuIcon = ({mode}) => (
+export const MenuIcon = ({ mode }) => (
   <svg
     id="Capa_2"
     viewBox="0 0 19 19"
-    
     fill="transparent"
     className="h-[20px]"
+    xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <defs>
       <linearGradient
@@ -381,31 +430,20 @@ export const MenuIcon = ({mode}) => (
         <stop offset=".73" stopColor="#bf1667" />
         <stop offset="1" stopColor="#7011bb" />
       </linearGradient>
-      <linearGradient
-        id="cuadro1"
-        x1="24.26"
-        y1="13.79"
-        x2="7.66"
-        y2="-3.76"
-      />
-      <linearGradient
-        id="cuadro3"
-        x1="12.96"
-        y1="24.47"
-        x2="-3.64"
-        y2="6.93"
-      />
-      <linearGradient
-        id="cuadro4"
-        x1="18.77"
-        y1="18.98"
-        x2="2.17"
-        y2="1.44"
-      />
+      <linearGradient id="cuadro1" x1="24.26" y1="13.79" x2="7.66" y2="-3.76" />
+      <linearGradient id="cuadro3" x1="12.96" y1="24.47" x2="-3.64" y2="6.93" />
+      <linearGradient id="cuadro4" x1="18.77" y1="18.98" x2="2.17" y2="1.44" />
     </defs>
     <g id="Capa_1-2">
       <g>
-        <rect className="cls-1" fill="url(#cuadro1)" width="8" height="8" rx="1.87" ry="1.87" />
+        <rect
+          className="cls-1"
+          fill="url(#cuadro1)"
+          width="8"
+          height="8"
+          rx="1.87"
+          ry="1.87"
+        />
         <rect
           className="cls-4"
           fill="url(#cuadro1)"
@@ -444,6 +482,7 @@ export const DollarIcon = ({}) => (
     fill="none"
     className="stroke-purple-800"
     xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
   >
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
     <g
@@ -467,6 +506,7 @@ export const StarIcon = ({ color }) => (
   <svg
     fill="black"
     xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
     className="h-full text-purple-800  w-[30px] pl-1"
   >
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
@@ -598,6 +638,7 @@ export const PlantaIcon = ({}) => (
     viewBox="0 0 1024 1024"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
+    
     fill="#000000"
   >
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
@@ -650,11 +691,10 @@ export const HomeIcon = ({ className, ...rest }) => (
 export const SunIcon = ({ className, ...rest }) => (
   <svg
     xmlns="http://www.w3.org/2000/svg"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
     width="24"
     height="24"
     viewBox="0 0 24 24"
-    
-    
     {...rest}
     className={`w-[20px] h-[20px] ${className} rounded-full`}
   >
@@ -665,7 +705,7 @@ export const SunIcon = ({ className, ...rest }) => (
       strokeLinejoin="round"
       strokeWidth="2"
     >
-      <g strokeDasharray="2" >
+      <g strokeDasharray="2">
         <path d="M12 21v1M21 12h1M12 3v-1M3 12h-1">
           <animate
             fill="freeze"
@@ -784,7 +824,7 @@ export const SunIcon = ({ className, ...rest }) => (
           values="3;12"
         />
       </circle>
-      <circle cx="22" cy="2" r="1" >
+      <circle cx="22" cy="2" r="1">
         <animate
           fill="freeze"
           attributeName="cx"
@@ -833,6 +873,7 @@ export const MoonIcon = ({ className, ...rest }) => (
     width="24"
     height="24"
     viewBox="0 0 24 24"
+    xmlnsXlink="http://www.w3.org/1999/xlink"
     {...rest}
     className={`w-full h-auto ${className}`}
   >

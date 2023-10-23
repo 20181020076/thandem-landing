@@ -24,11 +24,11 @@ const NavBar = ({mode, setMode}) => {
   return (
     <div className={`w-[95%] h-[40px] px-2 flex z-50 bg-primary rounded-full justify-between  fixed top-4 left-1/2 -translate-x-1/2 transition-all duration-300 dark:bg-dark ${visible ? '' :  (!isOpen&& '-translate-y-20')}`}>
       <div
-        className={` fixed -top-4  flex w-[80vw] items-center h-[100vh] bg-primary text-white transition-all duration-300 ${
+        className={` fixed -top-4  flex w-[80vw] pt-[10vh] h-[100vh] bg-primary text-white transition-all duration-300 ${
           !isOpen ? "-left-[500px]": "-left-[2.5vw]"
         } `}
       >
-        <ul className="flex flex-col gap-1 capitalize">
+        <ul className="flex flex-col border w-full gap-1 capitalize">
           <li>
             <a href="#seccion1" onClick={()=>{setIsOpen(false)} }>Home</a>
           </li>

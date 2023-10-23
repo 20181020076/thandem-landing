@@ -80,7 +80,7 @@ export default function Home() {
         <div className="w-full h-[100vh]">
           <div className="flex justify-center items-center  w-[100%] h-[75%] relative">
             <div className="w-full h-[30vh] flex justify-center  items-end absolute -bottom-1 z-10 bg-gradient-to-b from-transparent to-white dark:to-black">
-              <p className="text-center font-monserrat-alternates font-extralight text-[17px]">
+              <p className="text-center font-extralight text-[17px]">
                 Al final de todo solo nos quedamos <br></br> con nuestras
                 experiencias
               </p>
@@ -148,8 +148,8 @@ export default function Home() {
         <div
           className="w-full h-[65%] flex justify-center items-center "
           style={{
-            opacity: scrollY > windowHeight ? 1 : 0,
-            transform: `translateY(${scrollY > windowHeight ? 0 : 50}px)`,
+            opacity: scrollY > windowHeight*0.9 ? 1 : 0,
+            transform: `translateY(${scrollY > windowHeight *0.9? 0 : 50}px)`,
             transition: "opacity 0.5s, transform 0.5s",
           }}
         >

@@ -1,7 +1,7 @@
 import "./globals.css";
-import { Inter } from "next/font/google";
+import { Montserrat_Alternates } from "next/font/google";
 import Head from "next/head";
-const inter = Inter({ subsets: ["latin"] });
+const montserrat = Montserrat_Alternates({ subsets: ["latin"], weight:["200","300","400","500","700","900"] });
 
 export const metadata = {
   title: "Thandem",
@@ -21,7 +21,7 @@ export default function RootLayout({ children }) {
         </link>
       </Head>
 
-      <body className={inter.className}>{children}</body>
+      <body className={montserrat.className}>{children}</body>
     </html>
   );
 }
