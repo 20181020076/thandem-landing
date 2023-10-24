@@ -326,7 +326,7 @@ export const EyeIcon = ({}) => (
       <defs></defs>
       <g id="Capa_1-2">
         <path
-          class="cls-1"
+          className="cls-1"
           fill="none"
           stroke="#fff"
           strokeLinecap="round"

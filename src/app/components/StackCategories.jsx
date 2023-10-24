@@ -6,6 +6,7 @@ import Image from "next/image";
 
 const StackCategories = ({ categories, colorTheme, setColorTheme }) => {
   const [currentCategory, setCurrentCategory] = useState(0);
+  const titleArray = categories[currentCategory].title.split(' ')
 
   const handleColor = () => {
     console.log(currentCategory);
@@ -22,13 +23,13 @@ const StackCategories = ({ categories, colorTheme, setColorTheme }) => {
   };
   const handleIcon = () => {
     if (categories[currentCategory].title === "Romanticos") {
-      return <RomanticIcon size={30}/>;
+      return <RomanticIcon size={30} />;
     } else if (categories[currentCategory].title === "Naturaleza") {
-      return <NatureIcon size={30}/>;
+      return <NatureIcon size={30} />;
     } else if (categories[currentCategory].title === "Cafe") {
-      return <CoffeIcon size={30}/>;
+      return <CoffeIcon size={30} />;
     } else if (categories[currentCategory].title === "Nightlife & Clubs") {
-      return <NightLifeIcon size={30}/>;
+      return <NightLifeIcon size={30} />;
     }
   };
   const handleNext = () => {
@@ -52,15 +53,23 @@ const StackCategories = ({ categories, colorTheme, setColorTheme }) => {
           <div
             className={` absolute w-[265px] h-[370px] flex flex-col justify-start items-center p-[10px] shadow-card rounded-2xl bg-white text-black  z-40`}
           >
-           
-              <h2 className="font-bold w-full text-start  text-[16px] ml-3 mb-[8px]">
-                {categories[currentCategory].title}
-              </h2>
-    
+            <h2 className="font-bold flex gap-1 w-full text-start  text-[16px] ml-3 mb-[8px]">
+            {titleArray.map((word,index, array)=>{
+              console.log(index, colorTheme)
+              return <span key={index} style={{color:index==titleArray.length-1?colorTheme:""}}>{word}</span>
+            })}
+            </h2>
 
             <div className="relative w-[97%]  h-[200px] bg-black rounded-2xl mb-[10px] overflow-hidden">
-              {/* <Image width={"auto"}  height={200} src={`/images/${categories[currentCategory].image}`} className="max-w-none" alt="category"/> */}
-              <div className="absolute bottom-[10px] right-[10px]">{handleIcon()}</div>
+              <Image
+                fill
+                src={`/images/${categories[currentCategory].image}`}
+                className="max-w-none object-cover"
+                alt="category"
+              />
+              <div className="absolute bottom-[10px] right-[10px]">
+                {handleIcon()}
+              </div>
             </div>
             <div>
               <p className="text-xs ml-3 ">

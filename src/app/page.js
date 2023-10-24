@@ -192,7 +192,7 @@ export default function Home() {
           }}
         >
           <LineContainer scrollY={scrollY} />
-          <div className=" w-full h-[405px] flex flex-col bottom-[2vh] items-end justify-end  gap-[3vh]  absolute">
+          <div className=" w-full h-[405px] flex flex-col bottom-[12px] items-end justify-end  gap-[20px]  absolute">
             <CardProfile
               orden={1}
               profile={{
