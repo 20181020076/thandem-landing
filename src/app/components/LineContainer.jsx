@@ -16,6 +16,7 @@ const LineContainer = ({ scrollY }) => {
         ] * 100
         
       );
+      
     }
   };
 

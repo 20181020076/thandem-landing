@@ -50,9 +50,9 @@ const CardServices = () => {
             <div className="flex justify-center items-center">
               {handleIcon()}
             </div>
-            <div className="flex flex-col text-center justify-center items-center">
-              <h3 className="text-xl font-bold">{services[currentCard].title}</h3>
-              <p className="text-lg max-w-[80%]">{services[currentCard].description}</p>
+            <div className="flex flex-col text-center justify-center items-center -translate-y-5">
+              <h3 className="text-xl font-bold ">{services[currentCard].title}</h3>
+              <p className="text-sm max-w-[80%]">{services[currentCard].description}</p>
             </div>
             <div
               className="absolute bottom-5 right-7"

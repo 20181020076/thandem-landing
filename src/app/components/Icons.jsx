@@ -1,4 +1,214 @@
 import React from "react";
+
+export const YoutubeIcon = ({}) => (
+  <>
+    <xml version="1.0" encoding="UTF-8" />
+    <svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37">
+      <defs></defs>
+      <g id="Capa_1-2">
+        <rect
+          className="cls-2"
+          width="37"
+          height="37"
+          rx="5.18"
+          ry="5.18"
+          fill="#d31d1c"
+        />
+        <rect
+          className="cls-1"
+          fill="#fff"
+          x="5.76"
+          y="8.87"
+          width="26.69"
+          height="18"
+          rx="5.29"
+          ry="5.29"
+        />
+        <polygon
+          className="cls-2"
+          fill="#d31d1c"
+          points="17.36 15.11 17.36 20.63 22.85 17.87 17.36 15.11"
+        />
+      </g>
+    </svg>
+  </>
+);
+{
+  /* <style>.cls-1{fill:#fff;}.cls-2{fill:#d31d1c;}</style> */
+}
+export const InstagramIcon = ({}) => (
+  <>
+    <xml version="1.0" encoding="UTF-8" />
+    <svg
+      id="Capa_2"
+      xmlns="http://www.w3.org/2000/svg"
+      xmlnsXlink="http://www.w3.org/1999/xlink"
+      viewBox="0 0 37 37"
+    >
+      <defs>
+        <clipPath id="clippath">
+          <rect
+            className="cls-4"
+            width="37"
+            height="37"
+            rx="5.18"
+            ry="5.18"
+            fill="none"
+          />
+        </clipPath>
+        <clipPath id="clippath1">
+          <rect
+            className="cls-4"
+            x="-5"
+            y="-5"
+            width="47"
+            height="47"
+            fill="none"
+          />
+        </clipPath>
+      </defs>
+      <g id="Capa_1-2">
+        <g className="cls-3" clipPath="url(#clippath)">
+          <g className="cls-2" clipPath="url(#clippath1)">
+            <image
+              width="99"
+              height="99"
+              transform="translate(-5.14 -5.42) scale(.48)"
+              xlinkHref="data:image/png;base64,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"
+            />
+          </g>
+        </g>
+        <g>
+          <path
+            className="cls-1"
+            fill="#fff"
+            d="M18.65,5.72c2.16,.08,4.33,.05,6.47,.27,3.85,.39,6.31,2.95,6.44,6.84,.14,3.83,.14,7.68,0,11.51-.15,3.97-2.81,6.67-6.82,6.84-4.12,.17-8.26,.09-12.39,.03-1.63-.02-3.14-.6-4.42-1.68-1.57-1.34-2.3-3.1-2.41-5.11-.22-4.04-.31-8.08,.06-12.11,.33-3.54,2.78-5.98,6.32-6.3,2.24-.2,4.49-.19,6.74-.28Zm-5.67,2.49c-.27,0-.55,.06-.82,.09-2.36,.32-3.82,1.63-4.15,3.98-.21,1.49-.2,3.01-.2,4.52,0,2.54-.02,5.09,.13,7.63,.15,2.64,1.85,4.27,4.48,4.45,1.67,.11,3.35,.15,5.03,.14,2.38,0,4.76-.01,7.13-.15,2.62-.15,4.19-1.67,4.57-4.2,.04-.27,.08-.55,.08-.83-.01-3.71,.05-7.41-.07-11.12-.08-2.53-1.66-4.18-4.18-4.43-2.11-.21-10.11-.11-12-.11Z"
+          />
+          <path
+            className="cls-1"
+            fill="#fff"
+            d="M18.5,25.14c-3.7,0-6.72-2.94-6.71-6.53,0-3.68,3.05-6.64,6.82-6.61,3.7,.02,6.7,2.97,6.69,6.57-.01,3.65-3.05,6.59-6.8,6.58Zm.03-2.32c2.44-.03,4.39-1.93,4.39-4.28,0-2.31-2-4.25-4.37-4.24-2.44,.01-4.41,1.96-4.38,4.35,.03,2.3,2.01,4.19,4.36,4.17Z"
+          />
+          <path
+            className="cls-1"
+            fill="#fff"
+            d="M25.58,13.39c-.9,0-1.69-.74-1.7-1.62-.01-.88,.75-1.65,1.65-1.67,.91-.02,1.73,.77,1.73,1.65,0,.87-.78,1.63-1.68,1.64Z"
+          />
+        </g>
+      </g>
+    </svg>
+  </>
+);
+{
+  /* <style>.cls-1{fill:#fff;}.cls-2{clip-path:url(#clippath-1);}.cls-3{clip-path:url(#clippath);}.cls-4{fill:none;}</style> */
+}
+
+export const TiktokIcon = ({}) => (
+  <>
+    <xml version="1.0" encoding="UTF-8" />
+    <svg id="Capa_2" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 37 37">
+      <defs></defs>
+      <g id="Capa_1-2">
+        <g>
+          <rect
+            className="cls-1"
+            width="37"
+            height="37"
+            rx="5.18"
+            ry="5.18"
+            fill="#fff"
+          />
+          <g>
+            <path
+              className="cls-2"
+              fill="#030303"
+              d="M13.95,25.44l.28,.26c.47,.65,1.14,1,1.91,1.15,2.16,.44,4.09-1.18,4.09-3.41,0-5.14,0-10.27,0-15.41,0-.14,0-.28,0-.43,0-.17,.06-.26,.25-.26,.89,.01,1.78,.02,2.67,.03,.13,.42,.21,.85,.4,1.24,.46,.98,1.06,1.84,2.03,2.39l.27,.23v.02h.02l.07,.06c.06,.07,.11,.14,.17,.2,.75,.7,1.64,1.13,2.62,1.38,0,.9-.01,1.81,.02,2.71,.01,.38-.13,.45-.47,.43-1.74-.09-3.34-.6-4.8-1.54-.1-.06-.2-.22-.33-.14-.11,.08-.05,.24-.05,.36,0,2.65,0,5.29,0,7.94,0,.76-.13,1.49-.37,2.2-1.28,3.83-5.33,5.93-9.22,4.8-.61-.18-1.15-.51-1.75-.71-.02-.01-.03-.03-.05-.04v-.02h-.01l-.34-.28h0l-.13-.12c-.26-.37-.55-.71-.78-1.1-1.96-3.35-1.25-7.33,1.77-9.76,1.28-1.03,2.76-1.59,4.43-1.57,0,.93,0,1.86,.03,2.78,0,.32-.12,.36-.4,.3-1.32-.24-2.43,.16-3.28,1.19-.81,.98-.99,2.11-.58,3.31,.27,.78,.74,1.44,1.54,1.78Z"
+            />
+            <path
+              className="cls-3"
+              fill="#fc014f"
+              d="M11.77,28.98c.6,.2,1.14,.53,1.75,.71,3.89,1.13,7.94-.97,9.22-4.8,.24-.71,.37-1.45,.37-2.2,0-2.65,0-5.29,0-7.94,0-.12-.06-.29,.05-.36,.13-.09,.23,.07,.33,.14,1.46,.95,3.06,1.46,4.8,1.54,.34,.02,.48-.05,.47-.43-.03-.9-.02-1.8-.02-2.71,.02,0,.04-.02,.05-.03,.25,.08,.51,.11,.76,.11,.27,0,.38,.07,.37,.37-.02,1.11-.02,2.22,0,3.33,0,.32-.11,.38-.4,.37-1.75-.09-3.37-.6-4.84-1.54-.1-.06-.19-.22-.33-.13-.1,.07-.04,.22-.04,.33,0,2.57,0,5.13,0,7.7,0,3.61-2.34,6.6-5.86,7.38-2.4,.54-4.57-.03-6.47-1.61-.08-.06-.14-.15-.21-.22Z"
+            />
+            <path
+              fill="#0ceee8"
+              className="cls-4"
+              d="M23.15,7.39c-.89,0-1.78-.02-2.67-.03-.19,0-.25,.08-.25,.26,0,.14,0,.28,0,.43,0,5.14,0,10.27,0,15.41,0,2.23-1.93,3.84-4.09,3.41-.76-.15-1.43-.5-1.91-1.15,.47,.04,.91,.23,1.4,.23,1.86-.02,3.39-1.5,3.4-3.36,.02-3.73,0-7.46,0-11.19,0-1.55,0-3.1,0-4.65,0-.29,.09-.38,.37-.37,1.1,.01,2.19,.01,3.29,0,.3,0,.47,.07,.43,.41-.02,.19,0,.39,.07,.57-.02,.01-.04,.03-.05,.05Z"
+            />
+            <path
+              fill="#0ceee8"
+              className="cls-4"
+              d="M16.65,16.08c-1.67-.02-3.15,.54-4.43,1.57-3.02,2.43-3.73,6.41-1.77,9.76,.23,.39,.52,.73,.78,1.1-.71-.35-1.18-.94-1.63-1.55-2.35-3.17-1.79-7.67,1.25-10.19,1.58-1.3,3.39-1.84,5.42-1.71,.34,.02,.47,.13,.42,.46-.02,.16,0,.33,0,.5-.01,.02-.03,.04-.05,.05Z"
+            />
+            <path
+              className="cls-3"
+              fill="#fc014f"
+              d="M16.65,16.08s.04-.03,.05-.05c.3,.02,.59,.04,.89,.05,.2,0,.27,.08,.27,.28,0,1.21,0,2.42,0,3.63,0,.35-.23,.19-.37,.16-1.66-.29-3.18,.52-3.83,2.06-.4,.97-.34,1.94,.13,2.88,.06,.11,.11,.23,.16,.35-.8-.34-1.27-1-1.54-1.78-.41-1.19-.23-2.33,.58-3.31,.85-1.02,1.97-1.42,3.28-1.19,.28,.05,.4,.02,.4-.3-.02-.93-.02-1.85-.03-2.78Z"
+            />
+            <path
+              className="cls-3"
+              fill="#fc014f"
+              d="M23.15,7.39s.03-.04,.05-.05c.28,0,.56,.02,.85,.02,.17,0,.26,.04,.26,.23,0,1.27,.48,2.37,1.25,3.37,.01,.02,.02,.05,.02,.07-.97-.55-1.57-1.41-2.03-2.4-.19-.4-.27-.83-.4-1.24Z"
+            />
+            <path
+              fill="#0ceee8"
+              className="cls-4"
+              d="M28.79,12.89s-.04,.02-.05,.03c-.98-.26-1.88-.68-2.62-1.38-.06-.06-.12-.13-.17-.2,.54,.15,1.03,.45,1.59,.54,.28,.04,.56,.12,.84,.11,.32,0,.44,.12,.41,.44-.02,.15,0,.31,0,.46Z"
+            />
+            <polygon
+              fill="#0ceee8"
+              className="cls-4"
+              points="25.88 11.27 25.85 11.27 25.85 11.25 25.88 11.25 25.88 11.27"
+            />
+            <polygon
+              className="cls-4"
+              fill="#0ceee8"
+              points="11.37 28.63 11.37 28.63 11.36 28.64 11.37 28.63"
+            />
+            <polygon
+              className="cls-3"
+              fill="#fc014f"
+              points="11.71 28.92 11.73 28.91 11.72 28.93 11.7 28.94 11.71 28.92"
+            />
+          </g>
+        </g>
+      </g>
+    </svg>
+  </>
+);
+{
+  /* <style>.cls-1{fill:#fff;}.cls-2{fill:#030303;}.cls-3{fill:#fc014f;}.cls-4{fill:#0ceee8;}</style> */
+}
+
+export const FacebookIcon = ({}) => (
+  <>
+    <xml version="1.0" encoding="UTF-8" />
+    <svg
+      id="Capa_2"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 37 37"
+      className="w-full"
+    >
+      <defs></defs>
+      <g id="Capa_1-2">
+        <rect
+          className="cls-2"
+          width="37"
+          height="37"
+          rx="5.18"
+          ry="5.18"
+          fill="#0080ff"
+        />
+        <path
+          className="cls-1"
+          fill="#fff"
+          d="M19.99,29.44c0,2.09,0,4.17,0,6.26,0,.47,0,.49-.48,.49-1.69,0-3.38-.02-5.06-.02-.24,0-.29-.13-.29-.32,0-.65,0-1.29,0-1.94,0-3.58,0-7.16,0-10.74q0-.49-.5-.49c-1.27,0-2.54,0-3.81,0-.33,0-.42-.1-.42-.43,.01-1.54,.01-3.08,0-4.61,0-.3,.1-.39,.39-.39,1.29,0,2.58,0,3.87,0,.47,0,.47,0,.48-.46,.02-1.5,0-3.01,.07-4.51,.08-1.49,.62-2.83,1.54-4,1.05-1.34,2.5-1.9,4.12-2.15,1.71-.27,3.39-.04,5.06,.25,.21,.04,.28,.14,.28,.34,0,1.31,0,2.62,0,3.94,0,.27-.12,.32-.35,.33-.84,.02-1.68,.02-2.51,.07-.91,.06-1.61,.51-1.97,1.34-.22,.51-.35,1.09-.39,1.65-.07,.93-.02,1.87-.03,2.8,0,.31,.12,.41,.42,.41,1.39,0,2.77,0,4.16,0,.5,0,.5,0,.43,.51-.2,1.5-.41,3-.6,4.51-.04,.3-.14,.42-.46,.42-1.18-.02-2.37,0-3.55-.01-.32,0-.41,.11-.41,.41,0,2.12,0,4.24,0,6.36Z"
+        />
+      </g>
+    </svg>
+  </>
+);
+// <style>.cls-1{fill:#fff;}.cls-2{fill:#0080ff;}</style>
+
 export const ProfileCircleIcon = ({}) => (
   <svg
     id="Capa_2"
@@ -40,7 +250,7 @@ export const ProfileCircleIcon = ({}) => (
 export const FlexibleIcon = ({}) => (
   <svg
     id="Capa_2"
-    className="w-[200px] h-[200px]"
+    className="w-[150px] h-[200px]"
     viewBox="0 0 128.58 104.76"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -61,7 +271,7 @@ export const BarCharIcon = ({}) => (
   <svg
     viewBox="0 0 24 24"
     fill="none"
-    className="w-[200px] h-[200px]"
+    className="w-[150px] h-[200px]"
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
@@ -105,59 +315,58 @@ export const BarCharIcon = ({}) => (
   </svg>
 );
 export const EyeIcon = ({}) => (
-  <svg
-    viewBox="0 0 24 24"
-    fill="white"
-    className="w-[200px] h-[200px]"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
-  >
-    <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>
-    <g
-      id="SVGRepo_tracerCarrier"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    ></g>
-    <g id="SVGRepo_iconCarrier">
-      {" "}
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M11.9944 15.5C13.9274 15.5 15.4944 13.933 15.4944 12C15.4944 10.067 13.9274 8.5 11.9944 8.5C10.0614 8.5 8.49439 10.067 8.49439 12C8.49439 13.933 10.0614 15.5 11.9944 15.5ZM11.9944 13.4944C11.1691 13.4944 10.5 12.8253 10.5 12C10.5 11.1747 11.1691 10.5056 11.9944 10.5056C12.8197 10.5056 13.4888 11.1747 13.4888 12C13.4888 12.8253 12.8197 13.4944 11.9944 13.4944Z"
-      ></path>{" "}
-      <path
-        fillRule="evenodd"
-        clipRule="evenodd"
-        d="M12 5C7.18879 5 3.9167 7.60905 2.1893 9.47978C0.857392 10.9222 0.857393 13.0778 2.1893 14.5202C3.9167 16.391 7.18879 19 12 19C16.8112 19 20.0833 16.391 21.8107 14.5202C23.1426 13.0778 23.1426 10.9222 21.8107 9.47978C20.0833 7.60905 16.8112 5 12 5ZM3.65868 10.8366C5.18832 9.18002 7.9669 7 12 7C16.0331 7 18.8117 9.18002 20.3413 10.8366C20.9657 11.5128 20.9657 12.4872 20.3413 13.1634C18.8117 14.82 16.0331 17 12 17C7.9669 17 5.18832 14.82 3.65868 13.1634C3.03426 12.4872 3.03426 11.5128 3.65868 10.8366Z"
-      ></path>{" "}
-    </g>
-  </svg>
+  <>
+    <xml version="1.0" encoding="UTF-8" />
+    <svg
+      id="Capa_2"
+      xmlns="http://www.w3.org/2000/svg"
+      viewBox="0 0 89.01 64.56"
+      className="w-[150px] h-[200px]"
+    >
+      <defs></defs>
+      <g id="Capa_1-2">
+        <path
+          class="cls-1"
+          fill="none"
+          stroke="#fff"
+          strokeLinecap="round"
+          strokeLinejoin="round"
+          strokeWidth="6px"
+          d="M3,21.08c1.5,24.14,22.54,42.14,45.18,40.36,18.45-1.46,34.02-15.74,37.7-34.39,.76-3.86-2.19-7.45-6.12-7.45-9.5,0-19.01-.01-28.52-.02-5.1,0-11.16-.88-15.69,1.86-3.78,2.29-6.15,6.48-6.15,10.91,0,7.53,6.53,13.54,14.24,12.66,6.75-.76,11.74-6.69,11.74-13.49V3"
+        />
+      </g>
+    </svg>
+  </>
 );
+{
+  /* <style>.cls-1{fill:none;stroke:#fff;stroke-linecap:round;stroke-linejoin:round;stroke-width:6px;}</style> */
+}
 export const LineIcon = React.forwardRef((props, ref) => (
-  <svg
-    id="Capa_2"
-    viewBox="0 0 323.09 913.86"
-    className="w-[300px]"
-    xmlns="http://www.w3.org/2000/svg"
-    xmlnsXlink="http://www.w3.org/1999/xlink"
-  >
-    <defs></defs>
-    <g id="Capa_1-2">
-      <path
-        ref={ref}
-        className="cls-1"
-        fill="none"
-        stroke="#666"
-        strokeLinecap="round"
-        strokeMiterlimit={10}
-        strokeWidth="2.09px"
-        d="M69.07,1.05H21.94C10.4,1.05,1.05,10.4,1.05,21.94V430.93c0,26.28,21.31,47.59,47.59,47.59h238.68c19.18,0,34.73,14.22,34.73,31.77v83.96c0,17.55-15.55,31.77-34.73,31.77H41.48c-19.18,0-34.73,14.22-34.73,31.77v86.46c0,17.55,15.55,31.77,34.73,31.77h245.84c19.18,0,34.73,14.22,34.73,31.77v73.26c0,17.55-15.55,31.77-34.73,31.77H1.05"
-      />
-    </g>
-  </svg>
+  <>
+    <xml version="1.0" encoding="UTF-8" />
+    <svg
+      id="Capa_2"
+      xmlns="http://www.w3.org/2000/svg"
+      className="w-[300px]"
+      viewBox="0 0 324.1 928.51"
+    >
+      <defs></defs>
+      <g id="Capa_1-2">
+        <path
+          ref={ref}
+          fill="none"
+          opacity={0.51}
+          stroke="white"
+          strokeMiterlimit="10"
+          className="cls-1"
+          d="M323.6,.5H26.09C11.96,.5,.5,11.96,.5,26.09V453.42c0,14.13,11.46,25.59,25.59,25.59H298.01c14.13,0,25.59,11.46,25.59,25.59v96.52c0,14.13-11.46,25.59-25.59,25.59H26.09c-14.13,0-25.59,11.46-25.59,25.59v99.12c0,14.13,11.46,25.59,25.59,25.59H298.01c14.13,0,25.59,11.46,25.59,25.59v99.82c0,14.13-11.46,25.59-25.59,25.59H.5"
+        />
+      </g>
+    </svg>
+  </>
 ));
 {
-  /* <style>.cls-1{fill:none;stroke:#666;stroke-linecap:round;stroke-miterlimit:10;stroke-width:2.09px;}</style> */
+  /* <style>.cls-1{fill:none;opacity:.51;stroke:#a3a3a3;stroke-miterlimit:10;}</style> */
 }
 
 export const RapidezIcon = ({}) => (
@@ -210,7 +419,7 @@ export const BorderCount = ({}) => (
         <stop offset="0.73" stopColor="#bf1667" />
         <stop offset="1" stopColor="#7011bb" />
       </linearGradient>
-      <linearGradient id="degrade" x1="0" x2="268.08" />
+      <linearGradient id="degrade2" x1="0" x2="268.08" xlinkHref="#degrade" />
     </defs>
     <g id="Capa_1-2">
       <path
@@ -363,11 +572,11 @@ export const RomanticIcon = ({ size }) => (
     </g>
   </svg>
 );
-export const ThandemIcon = ({ mode }) => (
+export const ThandemIcon = ({ mode, color }) => (
   <svg
     id="Capa_2"
     viewBox="0 0 398.7 96.7"
-    fill={mode == "dark" ? "white" : "white"}
+    fill={mode == "dark" ? "white" : "#3c3a8f"}
     xmlns="http://www.w3.org/2000/svg"
     xmlnsXlink="http://www.w3.org/1999/xlink"
   >
@@ -638,7 +847,6 @@ export const PlantaIcon = ({}) => (
     viewBox="0 0 1024 1024"
     version="1.1"
     xmlns="http://www.w3.org/2000/svg"
-    
     fill="#000000"
   >
     <g id="SVGRepo_bgCarrier" strokeWidth="0"></g>

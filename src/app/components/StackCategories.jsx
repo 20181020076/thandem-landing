@@ -2,6 +2,7 @@
 import React, { useState, useEffect } from "react";
 import { NextIcon } from "./Icons";
 import { RomanticIcon, NatureIcon, CoffeIcon, NightLifeIcon } from "./Icons";
+import Image from "next/image";
 
 const StackCategories = ({ categories, colorTheme, setColorTheme }) => {
   const [currentCategory, setCurrentCategory] = useState(0);
@@ -57,7 +58,8 @@ const StackCategories = ({ categories, colorTheme, setColorTheme }) => {
               </h2>
     
 
-            <div className="relative w-[97%]  h-[200px] bg-black rounded-2xl mb-[10px]">
+            <div className="relative w-[97%]  h-[200px] bg-black rounded-2xl mb-[10px] overflow-hidden">
+              {/* <Image width={"auto"}  height={200} src={`/images/${categories[currentCategory].image}`} className="max-w-none" alt="category"/> */}
               <div className="absolute bottom-[10px] right-[10px]">{handleIcon()}</div>
             </div>
             <div>
